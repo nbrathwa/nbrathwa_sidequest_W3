@@ -1,12 +1,12 @@
 ## Project Title
 
-GBDA302 Week 3 Example 1: Instructions Screen with Back button
+GBDA302 Week 3 Sidquest
 
 ---
 
 ## Authors
 
-Karen Cochrane and David Han
+Nia Brathwaite (nbrathwa) 21109855
 
 ---
 
@@ -35,5 +35,6 @@ N/A
 ## GenAI
 
 The code was written by Dr. Karen Cochrane but she used GenAI to write the comments.
+After downloading the code from Dr.Karen Cochrane, Nia Brathwaite used GenAI to brainstorm ideas to modify the code and write the comments.
 
 ---
