@@ -25,31 +25,62 @@ const gameBtn = {
 // ------------------------------
 // drawGame() is called from main.js *only*
 // when currentScreen === "game"
+
+const leftDoor = {
+  x: 250, // x position (centre of the button)
+  y: 400, // y position (centre of the button)
+  w: 200, // width
+  h: 300, // height
+  label: "Left Door", // text shown
+};
+
+const rightDoor = {
+  x: 550, // x position (centre of the button)
+  y: 400, // y position (centre of the button)
+  w: 200, // width
+  h: 300, // height
+  label: "Right Door", // text shown
+};
+
 function drawGame() {
   // Set background colour for the game screen
-  background(240, 230, 140);
+  background("black");
 
   // ---- Title and instructions text ----
-  fill(0); // black text
+  fill("white"); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
   text("Game Screen", width / 2, 160);
 
   textSize(18);
-  text(
-    "Click the button (or press ENTER) for a random result.",
-    width / 2,
-    210,
-  );
+  text("Pick a Door to see if you win or lose!", width / 2, 210);
+
+  drawDoor(leftDoor);
+  drawDoor(rightDoor);
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
-  drawGameButton(gameBtn);
+  //drawGameButton(gameBtn);
 
   // ---- Cursor feedback ----
   // If the mouse is over the button, show a hand cursor
   // Otherwise, show the normal arrow cursor
-  cursor(isHover(gameBtn) ? HAND : ARROW);
+  cursor(isHover(leftDoor) || isHover(rightDoor) ? HAND : ARROW);
+}
+
+function drawDoor({ x, y, w, h, label }) {
+  rectMode(CENTER);
+
+  const hover = isHover({ x, y, w, h });
+
+  noStroke();
+  fill(hover ? color(180, 220, 255, 220) : color(200, 220, 255, 190));
+  rect(x, y, w, h, 14);
+
+  fill(0);
+  textSize(28);
+  textAlign(CENTER, CENTER);
+  text(label, x, y);
 }
 
 // ------------------------------

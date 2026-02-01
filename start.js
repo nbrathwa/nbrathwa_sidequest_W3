@@ -12,13 +12,13 @@
 // currentScreen === "start"
 function drawStart() {
   // Background colour for the start screen
-  background(180, 225, 220); // soft teal background
+  background("black"); // black background
 
   // ---- Title text ----
-  fill(30, 50, 60);
+  fill("white");
   textSize(46);
   textAlign(CENTER, CENTER);
-  text("Win or Lose", width / 2, 180);
+  text("Pick a Door Game", width / 2, 180);
 
   // ---- Buttons (data only) ----
   // These objects store the position/size/label for each button.
@@ -110,7 +110,7 @@ function drawButton({ x, y, w, h, label }) {
   // We also add a shadow using drawingContext (p5 lets you access the
   // underlying canvas context for effects like shadows).
   if (hover) {
-    fill(255, 200, 150, 220); // warm coral on hover
+    fill(204, 204, 255, 220); // periwinkle on hover
 
     // Shadow settings (only when hovered)
     drawingContext.shadowBlur = 20;
@@ -130,7 +130,7 @@ function drawButton({ x, y, w, h, label }) {
   drawingContext.shadowBlur = 0;
 
   // Draw the label text on top of the button
-  fill(40, 60, 70);
+  fill("white");
   textSize(28);
   textAlign(CENTER, CENTER);
   text(label, x, y);

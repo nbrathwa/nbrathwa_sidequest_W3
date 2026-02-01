@@ -15,9 +15,9 @@
 // only when currentScreen === "win"
 function drawWin() {
   // Green-tinted background to communicate success
-  background(200, 255, 200);
+  background("black");
 
-  fill(0);
+  fill("white");
   textAlign(CENTER, CENTER);
 
   // Main success message

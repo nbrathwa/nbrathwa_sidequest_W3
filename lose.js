@@ -11,9 +11,9 @@
 // only when currentScreen === "lose"
 function drawLose() {
   // Red-tinted background to communicate failure
-  background(255, 210, 210);
+  background("black");
 
-  fill(0);
+  fill("white");
   textAlign(CENTER, CENTER);
 
   // Main message
