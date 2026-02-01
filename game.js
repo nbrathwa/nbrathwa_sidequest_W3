@@ -47,10 +47,10 @@ function drawGame() {
   background("black");
 
   // ---- Title and instructions text ----
-  fill("white"); // black text
+  fill("white");
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Game Screen", width / 2, 160);
+  //text("Game Screen", width / 2, 160);
 
   textSize(18);
   text("Pick a Door to see if you win or lose!", width / 2, 210);
@@ -122,8 +122,10 @@ function drawGameButton({ x, y, w, h, label }) {
 // only when currentScreen === "game"
 function gameMousePressed() {
   // Only trigger the outcome if the button is clicked
-  if (isHover(gameBtn)) {
-    triggerRandomOutcome();
+  if (isHover(leftDoor)) {
+    currentScreen = "win";
+  } else if (isHover(rightDoor)) {
+    currentScreen = "lose";
   }
 }
 

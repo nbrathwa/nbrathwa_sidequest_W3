@@ -12,10 +12,10 @@
 // only when currentScreen === "instr"
 function drawInstr() {
   // Light neutral background
-  background(240);
+  background("black");
 
   // ---- Screen title ----
-  fill(0);
+  fill("white");
   textAlign(CENTER, TOP);
   textSize(36);
   text("Instructions", width / 2, 80);
