@@ -1,6 +1,6 @@
 ## Project Title
 
-GBDA302 Week 3 Sidquest
+GBDA302 Week 3 Sidequest
 
 ---
 
